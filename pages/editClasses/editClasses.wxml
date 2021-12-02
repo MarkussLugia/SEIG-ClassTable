@@ -1,0 +1,46 @@
+<!--pages/editClasses/editClasses.wxml-->
+<view class="body {{dark ? 'dark' : 'light'}}">
+  <view class="head bg1 {{dark? 'dark':'light'}}">
+    <card-frame color="linear-gradient(45deg, #404060, #58589F);" text-color="white">
+      <view class="blockTextMedium cardRow">
+        <text class="important" wx:if="{{!ready}}">添加本学期的课程</text>
+        <text class="important" wx:else>编辑课程列表</text>
+      </view>
+    </card-frame>
+  </view>
+  <scroll-view class="classes">
+    <edit-class wx:key="key" wx:for="{{classes}}" index="{{index}}" info="{{item}}" protect="{{item.protect}}" dark="{{dark}}" binddelete="deleteClass" bindedit="editClass"></edit-class>
+    <card-frame color="rgba(127,127,127,0.8)">
+      <view class="flex addFlex">
+        <input bindinput="checkInputCode" model:value="{{add}}" type="text" class="codeInput blockTextSmall" maxlength="7" placeholder="输入课程代码来添加课程..." placeholder-class="code-ph" />
+        <view class="addLogo" bindtap="addClass"></view>
+      </view>
+    </card-frame>
+  </scroll-view>
+  <view class="edit {{code !== '' ? 'editing':''}} bg2 txt {{dark? 'dark':'light'}}">
+    <view class="blockTextBig important">{{classes[code] ? '编辑': '添加'}}课程：{{code}}</view>
+    <view class="editInput blockTextsmall flex">
+      <view>课程名称：</view>
+      <input bindinput="checkInput" model:value="{{name}}" class="editTextBox inputBox" type="text" maxlength="15" />
+    </view>
+    <view class="editInput blockTextsmall flex">
+      <view>老师：</view>
+      <input bindinput="checkInput" model:value="{{teacher}}" class="editTextBox inputBox" type="text" maxlength="7" />
+    </view>
+    <view class="editInput blockTextsmall flex">
+      <view>教学班：</view>
+      <input bindinput="checkInput" model:value="{{group}}" class="editTextBox inputBox" type="text" maxlength="7" />
+    </view>
+    <view class="editInputRight flex blockTextSmall important">
+      <view class="no txt {{dark? 'dark':'light'}}" bindtap="cancel">取消</view>
+      <view class="yes {{name == '' || teacher == ''|| group == '' ? 'disabled' : ''}}" bindtap="{{name == '' || teacher == ''|| group == '' ? '' : 'change'}}">确定</view>
+    </view>
+  </view>
+  <view class="guideFrame blockTextSmall flex txtGreyLight bg2 {{dark? 'dark':'light'}}">
+    <view>
+      <text wx:if="{{!ready}}">第1步，共3步</text><text wx:else> </text>
+    </view>
+    <view class="important" wx:if="{{!ready}}" bindtap="next"><text>下一步 ></text></view>
+    <view class="important" wx:else bindtap="save"><text>保存</text></view>
+  </view>
+</view>

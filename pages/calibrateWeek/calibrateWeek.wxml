@@ -1,0 +1,26 @@
+<!--pages/setupWizard/setupWizard.wxml-->
+<view class="body {{dark ? 'dark' : 'light'}}">
+  <card-frame color="linear-gradient(45deg, #404060, #58589F);" text-color="white">
+    <view class="blockTextMedium cardRow">
+      <text class="important">校准当前教学周</text>
+    </view>
+  </card-frame>
+  <view class="container cali flex flexCenterCo">
+    <view class="caliBox flex flexCenterCo">
+      <view wx:if="{{!calibrated}}" class="blockTextBig txtGrey important">现在是本学期的第几周？</view>
+      <view wx:if="{{!calibrated}}" class="weekButtonBox flex flexCenterRo">
+        <view wx:key="key" wx:for="{{weekList}}" data-select="{{item}}" class="weekButton important txt {{dark ? 'dark' : 'light'}}" bindtap="calibrateWeek">{{item}}</view>
+      </view>
+      <view wx:else class="blockTextBig success important">校准成功！现在是第{{week}}周</view>
+    </view>
+    <view class="bottomPlaceholder"></view>
+    <view class="blockTextSmall txtGrey">我们以后可以借此推算经过的周数。</view>
+    <view class="blockTextSmall txtGrey"><text wx:if="{{!ready}}">你可以随时在设置中再次校准。</text><text wx:else>若当前教学周显示无误，则无需进行校准。</text></view>
+  </view>
+  <view wx:if="{{!ready}}" class="guideFrame blockTextSmall flex txtGreyLight bg2 {{dark? 'dark':'light'}}">
+    <view>
+      <text>第3步，共3步</text>
+    </view>
+    <view class="important" bindtap="next"><text>下一步 ></text></view>
+  </view>
+</view>

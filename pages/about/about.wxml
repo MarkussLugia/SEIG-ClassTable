@@ -1,0 +1,16 @@
+<!--pages/about/about.wxml-->
+<view class="body {{dark ? 'dark' : 'light'}}">
+  <scroll-view class="container">
+    <break-line text="拾穗"></break-line>
+    <card-frame color="radial-gradient(circle at left 480%, #3070D8 40%, #98B4CF 59%, #50ABC8 64%, #2B505B);" text-color="white">
+      <view class="blockTextMedium important cardRow">
+        天高云耀彗赫隐，际远风啸流龙吟。
+      </view>
+    </card-frame>
+    <break-line text="关于"></break-line>
+    <view class="bottomPlaceholder"></view>
+    <view class="blockTextSuper centerText star">☄️</view>
+    <view class="blockTextMedium txtGrey narrow centerText">作者很懒</view>
+    <view class="blockTextMedium txtGrey narrow centerText">这里什么都没写</view>
+  </scroll-view>
+</view>

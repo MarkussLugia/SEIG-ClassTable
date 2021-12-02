@@ -1,0 +1,15 @@
+/* components/cardFrame/cardFrame.wxss */
+
+.card {
+  width: calc(100% - 40rpx);
+  height: auto;
+  border-radius: calc(6px + 2rpx);
+  box-sizing: border-box;
+  padding: 2rpx 20rpx;
+  margin: 0 20rpx 14rpx;
+  transition: background-color 150ms;
+}
+
+.shadow {
+  box-shadow: 2.5px 1px 6px rgba(0, 0, 4, 0.1);
+}

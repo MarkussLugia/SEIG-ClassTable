@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "edit-class": "/components/editClassList/editClassList",
+    "card-frame": "/components/cardFrame/cardFrame"
+  }
+}

@@ -1,0 +1,21 @@
+<!--pages/setupWizard/setupWizard.wxml-->
+<view class="body {{dark ? 'dark' : 'light'}} flex flexCenterCo {{animate ? 'animate' : ''}}">
+  <view class="container wizard">
+    <view class="blockTextSuper narrow txtGrey centerText siltraTip">M</view>
+    <view class="blockTextSuper txtGrey centerText important"><text decode="true">&lt;°ヘ° &gt;&nbsp;？</text></view>
+    <view class="blockTextMedium txtGrey narrow centerText">似乎没有找到数据。</view>
+    <view class="blockTextMedium txtGrey narrow centerText"> 这是您第一次使用吗？</view>
+    <view class="bottomPlaceholder"></view>
+    <list-entry text="进行全新设置" logo="startWizard" clickable="{{true}}" dark="{{dark}}" data-to="/pages/editClasses/editClasses" bindtap="toLink"></list-entry>
+    <list-entry text="从之前的备份导入..." logo="restore" clickable="{{true}}" dark="{{dark}}" data-to="/pages/backupRestore/backupRestore" bindtap="toLink"></list-entry>
+    <break-line text="显示设置"></break-line>
+    <view class="displaySettingsBlock">
+      <list-entry bindtap="switchAdaptive" text="跟随系统深色模式" logo="adaptive" clickable="{{false}}" dark="{{dark}}">
+        <switch active="{{adaptive}}"></switch>
+      </list-entry>
+      <list-entry wx:if="{{!adaptive}}" bindtap="switchDark" text="启用深色模式" logo="dark" clickable="{{false}}" dark="{{dark}}">
+        <switch active="{{dark}}"></switch>
+      </list-entry>
+    </view>
+  </view>
+</view>

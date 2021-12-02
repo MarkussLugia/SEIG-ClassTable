@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/mine",
+    "pages/setupWizard/setupWizard",
+    "pages/backupRestore/backupRestore",
+    "pages/settings/settings",
+    "pages/about/about",
+    "pages/fullTable/fullTable",
+    "pages/editTable/editTable",
+    "pages/calibrateWeek/calibrateWeek",
+    "pages/editClasses/editClasses",
+    "pages/wizardFinish/wizardFinish"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "@bg",
+    "navigationBarTitleText": "广软课程表",
+    "navigationBarTextStyle": "@txt",
+    "backgroundColor": "@bg",
+    "backgroundColorTop": "@bg",
+    "backgroundColorBottom": "@bg"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/index/index"
+      },
+      {
+        "pagePath": "pages/index/mine"
+      }
+    ]
+  },
+  "darkmode": true,
+  "themeLocation": "theme.json"
+}

@@ -1,0 +1,39 @@
+/* components/listEntry/listEntry.wxss */
+.listEntry {
+  width: calc(100% - 40rpx);
+  margin: 0 20rpx 8rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  line-height: 60rpx;
+  font-size: 36rpx;
+  color: #505050;
+  box-sizing: border-box;
+  border-bottom: 4rpx none #A0A0A0;
+  border-radius: 5px;
+  padding: 15rpx 20rpx;
+  background-color: rgba(127, 127, 127, 0);
+  transition: background-color 360ms;
+}
+
+.listEntry.dark{
+  color: #B0B0B0;
+}
+
+.listEntry.clickable.hover{
+  background-color: rgba(127, 127, 127, 0.3);
+  transition: background-color 180ms;
+}
+
+.listEntry > .icon {
+  flex-grow: 0;
+  margin-right: 24rpx;
+  width: 56rpx;
+  height: 56rpx;
+  background-size: contain;
+}
+
+.listEntry > .text {
+  flex-grow: 1;
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "card-frame": "/components/cardFrame/cardFrame",
+    "break-line": "/components/breakLine/breakLine",
+    "list-entry": "/components/listEntry/listEntry"
+  }
+}
+

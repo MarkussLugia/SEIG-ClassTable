@@ -1,0 +1,7 @@
+<!--components/classGrid/classGrid.wxml-->
+<view class="mainGrid flex flexCenterCo {{info ? 'active' : ''}}" style="background: {{info[2][current] == '0' ? 'rgba(127, 127, 127, 0.6)' : color}}">
+  <view wx:if="{{info[2]}}" class="className">{{classes[info[0]].name}}</view>
+  <view wx:if="{{info[2]}}" class="classRoom">{{info[1]}}</view>
+  <view wx:if="{{!info[2]}}" class="placeholder {{selected?'selected':''}}"></view>
+</view>
+<view class="indicator {{selected?'selected':''}} bg2 {{dark? 'dark':'light'}}"></view>

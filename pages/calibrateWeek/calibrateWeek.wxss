@@ -1,0 +1,28 @@
+/* pages/setupWizard/setupWizard.wxss */
+.cali {
+  height: calc(100vh - 280rpx);
+}
+
+.caliBox{
+  height: 300rpx;
+}
+
+.weekButtonBox {
+  margin-top: 54rpx;
+  width: 100vw;
+}
+
+.weekButton {
+  height: 110rpx;
+  width: 110rpx;
+  border-radius: 55rpx;
+  background-color: rgba(127, 127, 127, 0.5);
+  font-size: 48rpx;
+  text-align: center;
+  line-height: 110rpx;
+  margin: 0 40rpx;
+}
+
+.success {
+  color: #30C080;
+}

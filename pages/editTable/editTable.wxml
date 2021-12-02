@@ -1,0 +1,34 @@
+<!--pages/fullTable/fullTable.wxml-->
+<view class="body {{dark ? 'dark' : 'light'}}">
+  <view class="head bg1 {{dark? 'dark':'light'}}">
+    <card-frame color="linear-gradient(45deg, #404060, #58589F);" text-color="white">
+      <view class="blockTextMedium cardRow">
+        <text class="important" wx:if="{{!ready}}">填写时间表</text>
+        <text class="important" wx:else>编辑时间表</text>
+      </view>
+    </card-frame>
+    <view class="tableHead flex blockTextTiny important txtGrey bg2 {{dark? 'dark':'light'}}">
+      <view class="headItem">星期一</view>
+      <view class="headItem">星期二</view>
+      <view class="headItem">星期三</view>
+      <view class="headItem">星期四</view>
+      <view class="headItem">星期五</view>
+    </view>
+  </view>
+  <scroll-view class="table">
+    <view wx:key="key" wx:for="{{tableInRow}}" class="primeRow bg2 {{dark? 'dark':'light'}}">
+      <view class="time txtGrey">{{timeTable[index].start + ' - ' + timeTable[index].end}}</view>
+      <view class="tableRow flex">
+        <class-grid wx:key="key" wx:for="{{item}}" wx:for-item="class" wx:for-index="week" dark="{{dark}}" info="{{class}}" selected="{{index == selectedRow && week == selectedClass.col}}" current="{{0}}" bindtap="edit" data-row="{{index}}" data-col="{{week}}" id="{{'grid' + index + week}}"></class-grid>
+      </view>
+      <class-edit id="{{'edit' + index}}" classes="{{classArray}}" active="{{index == selectedRow}}" info="{{selectedClass.class}}" dark="{{dark}}" bindedit="confirmEdit"></class-edit>
+    </view>
+  </scroll-view>
+  <view class="guideFrame blockTextSmall flex txtGreyLight bg2 {{dark? 'dark':'light'}}">
+    <view>
+      <text wx:if="{{!ready}}">第2步，共3步</text><text wx:else> </text>
+    </view>
+    <view class="important" wx:if="{{!ready}}" bindtap="next"><text>下一步 ></text></view>
+    <view class="important" wx:else bindtap="save"><text>保存</text></view>
+  </view>
+</view>

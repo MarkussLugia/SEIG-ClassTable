@@ -1,0 +1,17 @@
+/* pages/setupWizard/setupWizard.wxss */
+.wizard {
+  overflow: hidden;
+}
+
+.siltraTip {
+  transform: translateX(-32rpx) translateY(45rpx) skewX(-20deg) scaleX(2.5);
+}
+
+.displaySettingsBlock {
+  width: 100%;
+  height: 200rpx;
+}
+
+.animate{
+  transition: background-color 250ms;
+}

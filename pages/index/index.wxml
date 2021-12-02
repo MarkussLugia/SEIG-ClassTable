@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="body {{dark ? 'dark' : 'light'}}">
+  <scroll-view enable-flex="true" class="container">
+    <break-line text="第{{week}}周 {{weekdays[day]}}"></break-line>
+    <class-prompt></class-prompt>
+    <break-line text="今天的课程"></break-line>
+    <card-frame wx:for="{{classTodaySorted}}" wx:key="key" color="{{colors[item.state]}}" text-color="white">
+      <view wx:if="{{item.state > 0}}" class="blockTextMedium {{item.state < 3 ? 'important' : ''}}">{{classes[item.class[0]].name}}</view>
+      <view wx:if="{{item.state > 0}}" class="hr"></view>
+      <view class="blockTextSmall cardRow">
+        <view>{{item.state > 0 ? item.class[1] : classes[item.class[0]].name}}</view>
+        <view>{{item.time}}</view>
+      </view>
+    </card-frame>
+    <list-entry text="查看完整课表" logo="viewTable" clickable="{{true}}" dark="{{dark}}" data-to="/pages/fullTable/fullTable" bindtap="toLink"></list-entry>
+    <view class="bottomPlaceholder"></view>
+  </scroll-view>
+</view>

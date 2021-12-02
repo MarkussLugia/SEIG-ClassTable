@@ -1,0 +1,61 @@
+/* components/classGrid/classGrid.wxss */
+:host {
+  width: 100%;
+  height: min-content;
+}
+
+.mainGrid {
+  flex-flow: column nowrap;
+  width: 100%;
+  min-height: 0;
+  max-height: 0;
+  box-sizing: border-box;
+  text-align: left;
+  transition: all 300ms;
+  padding: 0 36rpx;
+  overflow: hidden;
+}
+.mainGrid.active{
+  min-height: 354rpx;
+  max-height: 354rpx;
+}
+
+.activeWeeks {
+  width: 100%;
+  margin: 24rpx 0 0;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.week {
+  box-sizing: border-box;
+  transform-origin: center;
+  margin: 0;
+  height: 33rpx;
+  min-width: 33rpx;
+  max-width: 33rpx;
+  border-radius: 17rpx;
+  flex-grow: 0;
+}
+
+.week.inactive {
+  color: transparent;
+  background-color: rgba(127, 127, 127, 0.8);
+  transform: scale(0.5);
+}
+
+.week.active {
+  color: white;
+  background-color: #30C080;
+  text-align: center;
+  font-size: 18.5rpx;
+  font-weight: bold;
+  line-height: 33rpx;
+}
+
+.placeholder {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 15rpx;
+  background-color: rgba(127, 127, 127, 0.3);
+}

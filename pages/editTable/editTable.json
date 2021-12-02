@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "card-frame": "/components/cardFrame/cardFrame",
+    "class-grid": "/components/tableGrid/tableGrid",
+    "class-edit": "/components/tableEdit/tableEdit"
+  }
+}

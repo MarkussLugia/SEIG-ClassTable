@@ -1,0 +1,146 @@
+/**app.wxss**/
+
+.body {
+  width: 100%;
+  min-height: 100vh;
+  height: max-content;
+  background-color: #707070;
+}
+
+.body.dark,
+.bg1.dark {
+  background-color: #202020;
+}
+
+.body.light,
+.bg1.light {
+  background-color: #FFFFFF;
+}
+
+.bg2.dark {
+  background-color: #343434;
+}
+
+.bg2.light {
+  background-color: #F0F0F0;
+}
+
+.txt {
+  color: #DDDDDD;
+}
+
+.txt.light {
+  color: #383838;
+}
+
+.txtGrey {
+  color: rgba(127, 127, 127, 0.9);
+}
+
+.txtGreyLight {
+  color: #989898;
+}
+
+.centerText {
+  text-align: center;
+}
+
+.flex,
+.cardRow {
+  display: flex;
+}
+
+.flexCenterCo,
+.flexCenterRo {
+  align-items: center;
+  justify-content: center;
+}
+
+.flexCenterRo {
+  flex-flow: row nowrap;
+}
+
+.flexCenterCo {
+  flex-flow: column nowrap;
+}
+
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: visible;
+  overflow-y: auto;
+}
+
+.bottomPlaceholder {
+  height: calc(120rpx + 8px);
+  width: 100%;
+}
+
+.important {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.blockTextSuper {
+  width: 100%;
+  font-size: 63rpx;
+  line-height: 120rpx;
+}
+
+.blockTextBig {
+  line-height: 96rpx;
+  font-size: 48rpx;
+}
+
+.blockTextMedium {
+  line-height: 86rpx;
+  font-size: 38rpx;
+}
+
+.blockTextSmall {
+  line-height: 64rpx;
+  font-size: 32rpx;
+}
+
+.blockTextTiny {
+  line-height: 54rpx;
+  font-size: 27rpx;
+}
+
+.narrow {
+  line-height: 1.5em;
+}
+
+.hr {
+  width: 100%;
+  border-top: 4rpx dotted rgba(255, 255, 255, 0.6);
+}
+
+.cardRow {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rpx;
+}
+
+.inputBox {
+  background-color: rgba(127, 127, 127, 0.3);
+}
+
+.guideFrame {
+  position: fixed;
+  z-index: 255;
+  box-sizing: border-box;
+  padding: 0 25rpx 8rpx;
+  bottom: 0;
+  width: 100vw;
+  height: 100rpx;
+  flex-flow: row nowrap;
+  line-height: 90rpx;
+  align-items: center;
+  justify-content: space-between;
+}

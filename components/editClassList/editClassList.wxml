@@ -1,0 +1,12 @@
+<!--components/editClassesItem/classEdit.wxml-->
+<card-frame color="{{color}}" text-color="white">
+  <view class="top flex">
+    <view class="blockTextMedium name"><text decode="true">{{info.name}}&nbsp;</text></view>
+    <view class="buttons flex flexCenterRo">
+      <view class="delete {{protect ? 'disabled' : ''}}" hover-class="hover" bindtap="delete"></view>
+      <view class="editBtn" hover-class="hover" bindtap="edit"></view>
+    </view>
+  </view>
+  <view class="hr"></view>
+  <view class="blockTextTiny"><text decode="true">课程代码:{{index}}&nbsp;&nbsp;老师:{{info.teacher}}&nbsp;&nbsp;教学班:{{info.group}}</text></view>
+</card-frame>

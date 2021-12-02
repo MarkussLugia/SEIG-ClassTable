@@ -1,0 +1,8 @@
+<!--components/listEntry/listEntry.wxml-->
+<view class="listEntry {{dark?'dark':''}} {{clickable?'clickable':''}}" hover-class="hover">
+  <view class="icon settings" style="{{start + (dark?'B0B0B0':'505050') + logoPaths[logo] + end}}"></view>
+  <view class="text">
+    <text>{{text}}</text>
+  </view>
+  <slot></slot>
+</view>

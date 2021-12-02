@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "card-frame": "/components/cardFrame/cardFrame"
+  },
+  "styleIsolation": "apply-shared"
+}

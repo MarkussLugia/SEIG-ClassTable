@@ -1,0 +1,98 @@
+/* components/classGrid/classGrid.wxss */
+:host {
+  width: 100%;
+  height: min-content;
+}
+
+.mainGrid {
+  flex-flow: column nowrap;
+  width: 100%;
+  min-height: 0;
+  max-height: 0;
+  box-sizing: border-box;
+  text-align: left;
+  transition: all 300ms;
+  padding: 0 36rpx;
+  overflow: hidden;
+}
+
+.mainGrid.active {
+  min-height: 90rpx;
+  max-height: 90rpx;
+}
+
+.mainGrid.active.expand {
+  min-height: 490rpx;
+  max-height: 490rpx;
+}
+
+.room {
+  height: 72rpx;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.roomInput {
+  margin-top: 4rpx;
+  text-align: center;
+  width: 240rpx;
+  height: 54rpx;
+  border-radius: 5rpx;
+}
+
+.activeWeeks {
+  width: 100%;
+  margin: 8rpx 0 0;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.week {
+  box-sizing: border-box;
+  transform-origin: center;
+  height: 56rpx;
+  min-width: 56rpx;
+  max-width: 56rpx;
+  border-radius: 28rpx;
+  flex-grow: 0;
+  color: white;
+  text-align: center;
+  font-size: 27rpx;
+  font-weight: bold;
+  margin: 5rpx 10rpx;
+  line-height: 56rpx;
+  transition: all 180ms;
+}
+
+.week.inactive {
+  background-color: rgba(127, 127, 127, 0.8);
+}
+
+.week.active {
+  background-color: #30C080;
+}
+
+.confirm {
+  margin-top: 22rpx;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.clear {
+  color: #ff476f;
+}
+
+.no {
+  margin-left: 42rpx;
+}
+
+.yes {
+  margin-left: 42rpx;
+  color: #30C080;
+}
+
+.yes.disabled{
+  opacity: 0.3;
+}

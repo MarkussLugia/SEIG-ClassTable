@@ -1,0 +1,4 @@
+<!--components/cardFrame/cardFrame.wxml-->
+<view class="card {{hasShadow? 'shadow': ''}}" style="background: {{color}}; color: {{textColor}};">
+  <slot></slot>
+</view>

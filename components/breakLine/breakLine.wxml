@@ -1,0 +1,2 @@
+<!--components/cardFrame/cardFrame.wxml-->
+<view class="text important">{{text}}</view><view class="hrBreakLine"></view>

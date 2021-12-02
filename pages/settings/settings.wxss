@@ -1,0 +1,4 @@
+/* pages/settings/settings.wxss */
+.animate{
+  transition: background-color 250ms;
+}

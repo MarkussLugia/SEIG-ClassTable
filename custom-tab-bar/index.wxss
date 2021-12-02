@@ -1,0 +1,103 @@
+.tabBar {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 120rpx;
+  box-sizing: border-box;
+  padding: 0 10rpx;
+  opacity: 1;
+  background: transparent;
+  display: flex;
+  justify-content: stretch;
+  flex-wrap: nowrap;
+  transition: all 200ms linear;
+}
+
+.tabBar.checkpoint {
+  opacity: 0.8;
+}
+
+.tabBarItem {
+  position: relative;
+  flex-grow: 1;
+  min-width: 25%;
+  background-color: #5050CF;
+  text-align: center;
+  margin: 0 10rpx 10px;
+  border-radius: calc(6px + 2rpx);
+  transition: all 200ms;
+  transition-timing-function: cubic-bezier(0, 0.4, 1, 1);
+}
+
+.tabBarItem.selected {
+  flex-grow: 5;
+  background-color: #E0E0EE;
+  transition-timing-function: cubic-bezier(0, 0, 1, 0.6);
+}
+
+.dark .tabBarItem.selected, .checkpoint.dark .tabBarItem{
+  background-color: #404048;
+}
+.dark .tabBarItem{
+  box-shadow: 0 6rpx 18rpx 15rpx rgba(15, 15, 15, 0.2) ;
+}
+
+.checkpoint .tabBarItem{
+  background-color: #E0E0EE;
+}
+
+.tabIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 54rpx;
+  height: 54rpx;
+  margin: 1px 5rpx 0 0;
+  opacity: 1;
+  background-size: cover;
+  transition: all 200ms;
+  transition-timing-function: cubic-bezier(0, 0.45, 1, 1);
+}
+
+.checkpoint .tabIcon, .selected .tabIcon {
+  opacity: 0;
+  transition-timing-function: cubic-bezier(0, 0, 1, 0.55);
+}
+
+
+.tabText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 35rpx;
+  font-weight: bold;
+  white-space: nowrap;
+  opacity: 1;
+  color: #505058;
+  transition: all 200ms;
+  transition-timing-function: cubic-bezier(0, 0, 1, 0.6);
+}
+
+.dark .tabText{
+  color: #E0E0EF;
+}
+
+.unselected .tabText {
+  opacity: 0;
+  transition-timing-function: cubic-bezier(0, 0.4, 1, 1);
+}
+
+.tabBarBg{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(255,255,255,1) 40%, rgba(255,255,255,0));
+}
+
+.dark .tabBarBg{
+  background: linear-gradient(to top, rgba(31,31,31,1) 40%, rgba(31,31,31,0));
+}

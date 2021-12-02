@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "list-entry": "/components/listEntry/listEntry",
+    "break-line": "/components/breakLine/breakLine",
+    "switch": "/components/switch/switch"
+  }
+}

@@ -1,0 +1,11 @@
+<!--components/classGrid/classGrid.wxml-->
+<view class="mainGrid flex {{active ? 'active' : ''}} txt bg2 {{dark? 'dark':'light'}}">
+  <view class="blockTextMedium important">{{classes[info[0]].name}}</view>
+  <view class="blockTextSmall narrow">老师：{{classes[info[0]].teacher}}</view>
+  <view class="blockTextSmall narrow">课程代码：{{info[0]}}</view>
+  <view class="blockTextSmall narrow">教学班：{{classes[info[0]].group}}</view>
+  <view class="blockTextSmall narrow">课室：{{info[1]}}</view>
+  <view class="activeWeeks flex">
+    <view wx:key="key" wx:for="{{weeks}}" class="week {{(item == '1') ? 'active' : 'inactive'}}">{{index+1}}</view>
+  </view>
+</view>

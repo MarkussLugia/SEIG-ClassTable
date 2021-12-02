@@ -1,0 +1,8 @@
+<card-frame color="{{colors[state]}}" text-color="white">
+  <view class="important {{state? 'blockTextSuper' : 'blockTextMedium'}}">{{promptText}}</view>
+  <view wx:if="{{state}}" class="hr"></view>
+  <view wx:if="{{state}}" class="blockTextSmall cardRow">
+    <view>{{left}}</view>
+    <view>{{right}}</view>
+  </view>
+</card-frame>

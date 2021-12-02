@@ -1,0 +1,6 @@
+.blockTextSuperNarrow {
+  width: 100%;
+  font-size: 72rpx;
+  line-height: 90rpx;
+  padding-top: 21rpx;
+}

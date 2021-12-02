@@ -1,0 +1,21 @@
+<!--pages/settings/settings.wxml-->
+<view class="body {{dark == true ? 'dark' : ''}} {{dark == false ? 'light' : ''}} {{animate ? 'animate' : ''}}">
+  <scroll-view class="container">
+    <card-frame color="linear-gradient(45deg, #404060, #58589F);" text-color="white">
+      <view class="blockTextSuper cardRow">
+        <text class="important">设置</text>
+      </view>
+    </card-frame>
+    <break-line text="显示"></break-line>
+    <list-entry bindtap="switchAdaptive" text="跟随系统深色模式" logo="adaptive" clickable="{{false}}" dark="{{dark}}"><switch active="{{adaptive}}"></switch></list-entry>
+    <list-entry wx:if="{{!adaptive}}" bindtap="switchDark" text="启用深色模式" logo="dark" clickable="{{false}}" dark="{{dark}}"><switch active="{{dark}}"></switch></list-entry>
+    <break-line text="数据管理"></break-line>
+    <list-entry text="校准教学周" logo="calibrateWeek" clickable="{{true}}" dark="{{dark}}" data-to="/pages/calibrateWeek/calibrateWeek" bindtap="toLink"></list-entry>
+    <list-entry text="编辑个人资料" logo="editInfo" clickable="{{true}}" dark="{{dark}}" data-to="/pages/setupWizard/setupWizard" bindtap="toLink"></list-entry>
+    <list-entry text="编辑课程" logo="editClass" clickable="{{true}}" dark="{{dark}}" data-to="/pages/editClasses/editClasses" bindtap="toLink"></list-entry>
+    <list-entry text="编辑时间表" logo="editTable" clickable="{{true}}" dark="{{dark}}" data-to="/pages/editTable/editTable" bindtap="toLink"></list-entry>
+    <list-entry text="备份/恢复小程序数据" logo="backupRestore" clickable="{{true}}" dark="{{dark}}" data-to="/pages/backupRestore/backupRestore" bindtap="toLink"></list-entry>
+    <break-line text="更多"></break-line>
+    <list-entry text="关于" logo="about" clickable="{{true}}" dark="{{dark}}" data-to="/pages/about/about" bindtap="toLink"></list-entry>
+  </scroll-view>
+</view>

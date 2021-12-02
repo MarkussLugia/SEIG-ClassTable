@@ -1,0 +1,35 @@
+/* components/switch/switch.wxss */
+.switchFrame {
+  width: 60rpx;
+  height: 100%;
+  margin-right: 10rpx;
+}
+
+.switchBox {
+  width: 100%;
+  height: 24rpx;
+  border-radius: 12rpx;
+  background-color: #808080;
+  transition: all 300ms;
+}
+
+.switchBox.active {
+  background-color: #5068D0;
+}
+
+.switchButton {
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+  left: -6rpx;
+  top: -8rpx;
+  border-radius: 20rpx;
+  background-color: #B0B0B0;
+  transition: all 300ms;
+}
+
+.switchButton.active {
+  left: 28rpx;
+  background-color: #708FFF;
+
+}

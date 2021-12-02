@@ -1,0 +1,24 @@
+<!--components/classGrid/classGrid.wxml-->
+<view class="mainGrid flex {{active ? 'active' : ''}} {{selectedClass != -1? 'expand' : ''}} txt bg2 {{dark? 'dark':'light'}}">
+  <picker bindchange="bindPickerChange" value="{{selectedClass}}" range="{{classes}}" range-key="name">
+    <view class="blockTextMedium important">{{selectedClass != -1 ? classes[selectedClass].name : '请选择课程...'}} ▾</view>
+  </picker>
+  <view wx:if="{{selectedClass != -1}}">
+    <view class="blockTextTiny narrow italic txtGrey"><text decode="true">课程代码:{{classes[selectedClass].code}}&nbsp;&nbsp;老师:{{classes[selectedClass].teacher}}&nbsp;&nbsp;教学班:{{classes[selectedClass].group}}</text></view>
+    <view class="blockTextSmall room flex">
+      <view>请输入课室：</view>
+      <view><input bindinput="checkInput" model:value="{{room}}" class="roomInput inputBox" type="text" maxlength="10" /></view>
+    </view>
+    <view class="blockTextSmall">请点选活动的教学周：</view>
+    <view class="activeWeeks flex">
+      <view wx:key="key" wx:for="{{weeks}}" data-index="{{index}}" class="week {{(item == '1') ? 'active' : 'inactive'}}" bindtap="switchWeek">{{index+1}}</view>
+    </view>
+    <view class="blockTextSmall confirm flex important">
+      <view class="clear"><text wx:if="{{!new}}" bindtap="clear">清除数据</text></view>
+      <view class="flex">
+        <view class="no txt {{dark? 'dark':'light'}}" bindtap="cancel">取消</view>
+        <view class="yes {{room == '' ? 'disabled' : ''}}" bindtap="{{room != ''? 'submit' : ''}}">确定</view>
+      </view>
+    </view>
+  </view>
+</view>

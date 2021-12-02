@@ -1,0 +1,13 @@
+<view class="body {{dark ? 'dark' : 'light'}}">
+  <view class="container cali flex flexCenterCo">
+    <view wx:if="{{!calibrated}}" class="blockTextBig txt {{dark ? 'dark' : 'light'}} important">设置完成</view>
+    <view class="blockTextSmall txtGrey">你的数据已保存。</view>
+    <view wx:if="{{!calibrated}}" class="weekButtonBox flex flexCenterRo">
+      <view wx:key="key" wx:for="{{weekList}}" data-select="{{item}}" class="weekButton important txt {{dark ? 'dark' : 'light'}}" bindtap="calibrateWeek">{{item}}</view>
+    </view>
+    <view wx:else class="blockTextBig success important">校准成功！现在是第{{week}}周</view>
+    <view class="bottomPlaceholder"></view>
+    <view class="blockTextSmall txtGrey">我们以后可以借此推算准确的周数。</view>
+    <view class="blockTextSmall txtGrey">你可以随时在设置中校准。</view>
+  </view>
+</view>

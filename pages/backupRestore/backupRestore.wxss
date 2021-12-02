@@ -1,0 +1,28 @@
+/* pages/backupRestore/backupRestore.wxss */
+#flex {
+  width: 100%;
+  height: calc(100vh - 300rpx);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.import {
+  width: calc(100% - 40rpx);
+  flex-grow: 1;
+  height: 480rpx;
+  font-weight: bold;
+  font-size: 24rpx;
+  border-radius: calc(6px + 2rpx);
+  color: #808080;
+  box-sizing: border-box;
+  padding: 20rpx;
+  margin: 24rpx 20rpx 14rpx;
+}
+
+.import-ph {
+  color: #808080;
+  font-weight: bold;
+  font-size: 30rpx;
+}

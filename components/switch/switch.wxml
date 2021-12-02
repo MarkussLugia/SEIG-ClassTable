@@ -1,0 +1,6 @@
+<!--components/switch/switch.wxml-->
+<view class="switchFrame flex flexCenterCo">
+  <view class="switchBox {{active? 'active':''}}">
+    <view class="switchButton {{active? 'active':''}}"></view>
+  </view>
+</view>

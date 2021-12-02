@@ -1,0 +1,90 @@
+/* pages/editClasses/editClasses.wxss */
+.head {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  height: 110rpx;
+}
+
+.classes {
+  margin-top: 110rpx;
+  padding-bottom: 12rpx;
+  margin-bottom: 100rpx;
+}
+
+.addFlex {
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: stretch;
+  height: 80rpx;
+}
+
+.codeInput {
+  flex-grow: 1;
+}
+
+.code-ph {
+  color: #D0D0D0;
+}
+
+.addLogo {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23FFFFFF'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z'/%3E%3C/svg%3E");
+  flex-grow: 0;
+  width: 42rpx;
+  height: 42rpx;
+  background-size: contain;
+}
+
+.edit {
+  z-index: 2;
+  position: fixed;
+  width: calc(100vw - 40rpx);
+  box-shadow: 0 200rpx 160rpx 50rpx rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+  height: 450rpx;
+  right: 20rpx;
+  bottom: -560rpx;
+  border-radius: 20rpx 20rpx 0 0;
+  transition: all 300ms;
+  opacity: 0
+}
+
+.edit.editing {
+  bottom: 0;
+  opacity: 1
+}
+
+.editInput {
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: stretch;
+  margin: 8rpx 0 16rpx;
+}
+
+.editInputRight {
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 28rpx 0 16rpx;
+}
+
+.editTextBox {
+  box-sizing: border-box;
+  padding-left: 12rpx;
+  margin-top: 4rpx;
+  height: 54rpx;
+  border-radius: 5rpx;
+  flex-grow: 1;
+}
+
+.yes {
+  margin: 0 20rpx 0 42rpx;
+  color: #30C080;
+}
+
+.yes.disabled {
+  opacity: 0.3;
+}
+
