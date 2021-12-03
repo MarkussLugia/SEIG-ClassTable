@@ -11,7 +11,7 @@
     <list-entry wx:if="{{!adaptive}}" bindtap="switchDark" text="启用深色模式" logo="dark" clickable="{{false}}" dark="{{dark}}"><switch active="{{dark}}"></switch></list-entry>
     <break-line text="数据管理"></break-line>
     <list-entry text="校准教学周" logo="calibrateWeek" clickable="{{true}}" dark="{{dark}}" data-to="/pages/calibrateWeek/calibrateWeek" bindtap="toLink"></list-entry>
-    <list-entry text="编辑个人资料" logo="editInfo" clickable="{{true}}" dark="{{dark}}" data-to="/pages/setupWizard/setupWizard" bindtap="toLink"></list-entry>
+    <!-- <list-entry text="编辑个人资料" logo="editInfo" clickable="{{true}}" dark="{{dark}}" data-to="/pages/setupWizard/setupWizard" bindtap="toLink"></list-entry> -->
     <list-entry text="编辑课程" logo="editClass" clickable="{{true}}" dark="{{dark}}" data-to="/pages/editClasses/editClasses" bindtap="toLink"></list-entry>
     <list-entry text="编辑时间表" logo="editTable" clickable="{{true}}" dark="{{dark}}" data-to="/pages/editTable/editTable" bindtap="toLink"></list-entry>
     <list-entry text="备份/恢复小程序数据" logo="backupRestore" clickable="{{true}}" dark="{{dark}}" data-to="/pages/backupRestore/backupRestore" bindtap="toLink"></list-entry>

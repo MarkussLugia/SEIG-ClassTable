@@ -84,6 +84,7 @@ module.exports = {
   },
 
   getWeek(firstMonth = 9, firstDay = 10, secondMonth = 3, secondDay = 10) {
+    //此方法非原创，来自于https://github.com/ckhckhm/SCSE_Asistant_Server
     const year = new Date().getFullYear()
     let formatTime = function (date) {
       let simpledate = date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + date.getDate();

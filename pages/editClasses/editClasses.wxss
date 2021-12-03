@@ -37,7 +37,7 @@
 }
 
 .edit {
-  z-index: 2;
+  z-index: 256;
   position: fixed;
   width: calc(100vw - 40rpx);
   box-shadow: 0 200rpx 160rpx 50rpx rgba(0, 0, 0, 0.4);
