@@ -10,7 +10,8 @@
     "pages/editTable/editTable",
     "pages/calibrateWeek/calibrateWeek",
     "pages/editClasses/editClasses",
-    "pages/wizardFinish/wizardFinish"
+    "pages/wizardFinish/wizardFinish",
+    "pages/editProfile/editProfile"
   ],
   "window": {
     "navigationBarBackgroundColor": "@bg",

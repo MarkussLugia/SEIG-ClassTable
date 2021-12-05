@@ -37,7 +37,6 @@ Component({
         this.setData({
           color: "#" + ((colorHash % 181) + 35).toString(16) + ((colorHash % 137) + 60).toString(16) + ((colorHash % 167) + 50).toString(16),
         })
-        console.log(this.data.color)
       } else {
         this.setData({
           color: 'transparent'

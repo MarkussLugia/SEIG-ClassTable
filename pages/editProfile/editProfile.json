@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "list-entry": "/components/listEntry/listEntry",
+    "card-frame": "/components/cardFrame/cardFrame"
+  }
+}

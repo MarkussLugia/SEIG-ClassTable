@@ -1,14 +1,14 @@
 <!--index.wxml-->
 <view class="body {{dark ? 'dark' : 'light'}}">
   <scroll-view class="container">
-    <!-- <card-frame color="linear-gradient(45deg, #4050E0, #7098FF);" text-color="white">
+    <card-frame wx:if="{{profile.name && profile.id}}" color="linear-gradient(45deg, #4050E0, #7098FF);" text-color="white">
       <view class="blockTextSuperNarrow cardRow">
-        <text class="important">用户名</text>
+        <text class="important">{{profile.name}}</text>
       </view>
       <view class="blockTextBig cardRow">
-        <text class="important">1919810114</text>
+        <text class="important">{{profile.id}}</text>
       </view>
-    </card-frame> -->
+    </card-frame>
     <break-line text="更多功能"></break-line>
     <list-entry text="设置与管理" logo="settings" clickable="{{true}}" dark="{{dark}}" data-to="/pages/settings/settings" bindtap="toLink"></list-entry>
   </scroll-view>

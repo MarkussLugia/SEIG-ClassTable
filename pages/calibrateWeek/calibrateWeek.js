@@ -28,11 +28,8 @@ Page({
     })
   },
   next() {
-    getApp().globalData.userData.ready = true
-    getApp().saveToStore()
-    getApp().readyLaunch()
-    wx.reLaunch({
-      url: '/pages/index/index',
+    wx.navigateTo({
+      url: '/pages/editProfile/editProfile',
     })
   },
   ...generalProperties,

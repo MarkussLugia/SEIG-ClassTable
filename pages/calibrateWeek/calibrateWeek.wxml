@@ -19,7 +19,7 @@
   </view>
   <view wx:if="{{!ready}}" class="guideFrame blockTextSmall flex txtGreyLight bg2 {{dark? 'dark':'light'}}">
     <view>
-      <text>第3步，共3步</text>
+      <text>第3步，共4步</text>
     </view>
     <view class="important" bindtap="next"><text>下一步 ></text></view>
   </view>

@@ -1,0 +1,32 @@
+<!--pages/setupWizard/setupWizard.wxml-->
+<view class="body {{dark ? 'dark' : 'light'}}">
+  <card-frame color="linear-gradient(45deg, #404060, #58589F);" text-color="white">
+    <view class="blockTextMedium cardRow">
+      <text class="important">编辑个人资料</text>
+    </view>
+  </card-frame>
+  <view class="container edit flex flexCenterCo">
+    <view class="container editBox">
+      <view class="blockTextBig txtGrey important">请填写个人信息：</view>
+      <view class="editInput blockTextsmall flex">
+        <view>姓名：</view>
+        <input bindinput="checkInput" model:value="{{name}}" class="editTextBox inputBox" type="text" maxlength="6" />
+      </view>
+      <view class="editInput blockTextsmall flex">
+        <view>学号：</view>
+        <input bindinput="checkInput" model:value="{{id}}" class="editTextBox inputBox" type="text" maxlength="10" />
+      </view>
+    </view>
+    <view class="bottomPlaceholder"></view>
+    <view class="blockTextSmall txtGrey">仅用于个人中心页面的头部卡片展示。</view>
+    <view class="blockTextSmall txtGrey">请随意填写，留空也可以。</view>
+    <view class="blockTextSmall txtGrey">我们不会收集或上传您的任何信息。</view>
+  </view>
+  <view class="guideFrame blockTextSmall flex txtGreyLight bg2 {{dark? 'dark':'light'}}">
+    <view>
+      <text wx:if="{{!ready}}">第4步，共4步</text><text wx:else> </text>
+    </view>
+    <view class="important" wx:if="{{!ready}}" bindtap="next"><text>下一步 ></text></view>
+    <view class="important" wx:else bindtap="save"><text>保存</text></view>
+  </view>
+</view>

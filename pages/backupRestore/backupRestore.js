@@ -66,6 +66,7 @@ Page({
     let b = JSON.parse(a)
     console.log(b)
     getApp().globalData.userData.classes = b.classes
+    getApp().globalData.userData.profile = b.profile
     getApp().globalData.userData.startDates = b.w
     getApp().globalData.userData.setDark = b.d ? true : false
     getApp().globalData.userData.adaptiveDark = b.a ? true : false

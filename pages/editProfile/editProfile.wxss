@@ -1,0 +1,22 @@
+/* pages/setupWizard/setupWizard.wxss */
+.edit {
+  height: calc(100vh - 280rpx);
+}
+.editBox {
+  box-sizing: border-box;
+  padding: 0 50rpx;
+}
+.editInput {
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: stretch;
+  margin: 8rpx 0 16rpx;
+}
+.editTextBox {
+  box-sizing: border-box;
+  padding-left: 12rpx;
+  margin-top: 4rpx;
+  height: 54rpx;
+  border-radius: 5rpx;
+  flex-grow: 1;
+}

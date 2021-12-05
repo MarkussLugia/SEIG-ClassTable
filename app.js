@@ -22,7 +22,11 @@ App({
       ],
       startDates: [8, 30, 3, 1],
       adaptiveDark: true,
-      setDark: true
+      setDark: true,
+      profile:{
+        name: "",
+        id: ""
+      }
     },
     timeTable: [{
         start: "9:00",
